@@ -176,6 +176,7 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -197,6 +198,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
   unicode_utils (~> 1.4)
+  yajl-ruby
 
 BUNDLED WITH
    1.12.5
