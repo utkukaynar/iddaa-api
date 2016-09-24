@@ -1,4 +1,6 @@
 class GamesController < ApplicationController
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
+  http_basic_authenticate_with name: "ulsc", password: "Utk1213."
   before_action :set_game, only: [:show]
 
   # GET /games
