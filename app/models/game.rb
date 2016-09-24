@@ -24,10 +24,10 @@ class Game < ApplicationRecord
     case self.category
     when /\/MS|MS/
       case guess
-      when /\/1|^1$/
-        "#{teams[0]} Kazanır"
-      when /\/2|^2$/
-        "#{teams[1]} Kazanır"
+      when /\/1|^1$|-1/
+        "#{UnicodeUtils.titlecase(teams[0], :tr)} Kazanır"
+      when /\/2|^2$|-2/
+        "#{UnicodeUtils.titlecase(teams[1], :tr)} Kazanır"
       when /-X|^X$/
         "Berabere Biter"
       end
@@ -44,6 +44,8 @@ class Game < ApplicationRecord
         "Toplam Gol 2.5'tan fazla"
       when "1.5 ÜST"
         "Toplam Gol 1.5'tan fazla"
+      when "ALT"
+        "Toplam Gol 2.5'tan az"
       end
     end
   end
