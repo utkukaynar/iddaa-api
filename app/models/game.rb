@@ -18,7 +18,7 @@
 #
 
 class Game < ApplicationRecord
-  scope :active, -> { where('date >= ?', Date.today) }
+  scope :active, -> { where('date >= ?', Date.yesterday) }
   def translation
     teams = self.teams.split(" - ")
     case self.category

@@ -5,7 +5,7 @@ class GamesController < ApplicationController
 
   # GET /games
   def index
-    @games = Game.active
+    @games = Game.active.order(date: :desc)
   end
 
   # GET /games/1
